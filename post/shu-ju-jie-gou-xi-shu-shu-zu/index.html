@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>数据结构——稀疏数组 | BlankPage</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blanktao.github.io/favicon.ico?v=1612419981856">
+<link rel="stylesheet" href="https://blanktao.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="稀疏数组
+基本介绍
+当一个数组中大部分元素为0，或者同一个值的数组，可以使用稀疏数组存储该数组
+稀疏数组可以缩小普通二维数组占用的空间
+处理方法
+
+记录数组一共有几行几列，有多少不同的格
+吧具有不同值的元素行列以及值记录在一个小规模的数组中..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blanktao.github.io">
+        <img src="https://blanktao.github.io/images/avatar.png?v=1612419981856" class="site-logo">
+        <h1 class="site-title">BlankPage</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      凛冬散尽 星河长明
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://blanktao.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">数据结构——稀疏数组</h2>
+            <div class="post-date">2021-02-04</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="稀疏数组">稀疏数组</h1>
+<h2 id="基本介绍">基本介绍</h2>
+<p>当一个数组中大部分元素为0，或者同一个值的数组，可以使用稀疏数组存储该数组<br>
+稀疏数组可以缩小普通二维数组占用的空间</p>
+<h2 id="处理方法">处理方法</h2>
+<ol>
+<li>记录数组一共有几行几列，有多少不同的格</li>
+<li>吧具有不同值的元素行列以及值记录在一个小规模的数组中，从而缩小程序的规模</li>
+</ol>
+<h2 id="思路">思路</h2>
+<h3 id="二维数组-转-稀疏数组">二维数组 转 稀疏数组</h3>
+<ol>
+<li>遍历原始的二维数组，得到有效数据的个数sum</li>
+<li>根据sum就可以创建稀疏数组sparseArr int[sum+1] [3]</li>
+<li>将二维数组的有效数据存入到稀疏数组</li>
+</ol>
+<h3 id="稀疏数组-转-原始二维数组">稀疏数组 转 原始二维数组</h3>
+<ol>
+<li>先读取稀疏数组的第一行，根据第一行的数据，创建原始的二维数组</li>
+<li>再读取稀疏数组后几行数据，并赋值给原始的二维数组</li>
+</ol>
+
+            </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

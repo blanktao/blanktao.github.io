@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://blanktao.github.io</id>
+    <title>BlankPage</title>
+    <updated>2021-02-04T06:26:26.123Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://blanktao.github.io"/>
+    <link rel="self" href="https://blanktao.github.io/atom.xml"/>
+    <subtitle>凛冬散尽 星河长明</subtitle>
+    <logo>https://blanktao.github.io/images/avatar.png</logo>
+    <icon>https://blanktao.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, BlankPage</rights>
+    <entry>
+        <title type="html"><![CDATA[数据结构——稀疏数组]]></title>
+        <id>https://blanktao.github.io/post/shu-ju-jie-gou-xi-shu-shu-zu/</id>
+        <link href="https://blanktao.github.io/post/shu-ju-jie-gou-xi-shu-shu-zu/">
+        </link>
+        <updated>2021-02-04T06:22:39.000Z</updated>
+    </entry>
+</feed>
